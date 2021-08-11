@@ -48,6 +48,8 @@ git clone git://github.com/WangChen0902/SID-Paddle.git
 
 将上文提到的数据集放到本项目data目录下，目录格式：SID-Paddle/data/Sony
 
+将本README附的模型文件放到checkpoint目录下，目录格式：SID-Paddle/checkpoint
+
 ### step3: 训练
 
 ```bash
