@@ -5,7 +5,7 @@ import utils.PSNR as PSNR
 import utils.SSIM as SSIM
 
 
-ROOT_PATH = 'E:/fsdownload/result_Sony/final/'
+ROOT_PATH = './result/result_Sony/final/'
 
 gt_list = []
 out_list = []
