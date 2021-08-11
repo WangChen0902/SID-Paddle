@@ -149,8 +149,8 @@ input_images['100'] = [None] * len(train_ids)
 g_loss = np.zeros((5000, 1))
 
 if train_parameters['start_epoch'] != 0:
-    model_name = os.path.join(train_parameters['checkpoint_load_dir'], 'model_%04d.pdparams' % train_parameters['start_epoches'])
-    opt_name = os.path.join(train_parameters['checkpoint_load_dir'], 'optimizer_%04d.pdopt' % train_parameters['start_epoches'])
+    model_name = os.path.join(train_parameters['checkpoint_load_dir'], 'model_%04d.pdparams' % train_parameters['start_epoch'])
+    opt_name = os.path.join(train_parameters['checkpoint_load_dir'], 'optimizer_%04d.pdopt' % train_parameters['start_epoch'])
     model_state_dict = paddle.load(model_name)
     opt_state_dict = paddle.load(opt_name)
     net_model.set_state_dict(model_state_dict)
