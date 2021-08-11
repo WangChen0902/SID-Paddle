@@ -42,6 +42,7 @@
 # clone this repo
 git clone git://github.com/WangChen0902/SID-Paddle.git
 ```
+下载完成后，在根目录创建 data、checkpoint、result三个目录
 
 ### step2: 下载数据
 
