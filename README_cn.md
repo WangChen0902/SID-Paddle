@@ -3,23 +3,23 @@
 [English](./README.md) | 简体中文
 
    * [SID-Paddle](#sid-paddle)
-      * [一、简介](#1-)
-      * [二、复现精度](#2-)
-      * [三、数据集](#3-)
-      * [四、环境依赖](#4-)
-      * [五、快速开始](#5-)
+      * [一、简介](#一简介)
+      * [二、复现精度](#二复现精度)
+      * [三、数据集](#三数据集)
+      * [四、环境依赖](#四环境依赖)
+      * [五、快速开始](#五快速开始)
          * [step1: clone](#step1-clone)
-         * [step2: 下载数据](#step2-)
-         * [step3: 训练](#step3-)
-         * [step4: 测试](#step4-)
-         * [step5: 评估](#step5-)
-      * [六、代码结构与详细说明](#6-)
-         * [6.1 代码结构](#61-)
-         * [6.2 参数说明](#62-)
-      * [七、模型信息](#7-)
-      * [八、复现心得](#8-)
+         * [step2: 下载数据](#step2-下载数据)
+         * [step3: 训练](#step3-训练)
+         * [step4: 测试](#step4-测试)
+         * [step5: 评估](#step5-评估)
+      * [六、代码结构与详细说明](#六代码结构与详细说明)
+         * [6.1 代码结构](#61-代码结构)
+         * [6.2 参数说明](#62-参数说明)
+      * [七、模型信息](#七模型信息)
+      * [八、复现心得](#八复现心得)
       
-## 1 简介
+## 一、简介
 【飞桨论文复现挑战赛】
 本项目是用百度飞桨框架paddlepaddle复现：Learning to See in the Dark in CVPR 2018, by [Chen Chen](http://cchen156.github.io/), [Qifeng Chen](http://cqf.io/), [Jia Xu](http://pages.cs.wisc.edu/~jiaxu/), and [Vladlen Koltun](http://vladlen.info/).
   
@@ -29,14 +29,14 @@
 
 本代码包含了原论文的默认配置下的训练和测试代码。
 
-## 2 复现精度
+## 二、复现精度
 
 | 指标 | 原论文 | 原代码精度 | 复现精度 |
 | --- | --- | --- | --- |
 | PSNR | 28.88 | 28.96 | 28.82 |
 | SSIM | 0.787 | 0.785 | 0.787 |
 
-## 3 数据集
+## 三、数据集
 使用的数据集为：[SID-Sony](https://pan.baidu.com/s/1fk8EibhBe_M1qG0ax9LQZA#list/path=%2F)
 注：如果只使用Sony数据集，只需要下载Sony开头的文件，下载结束后，使用"cat SonyPart* > Sony.zip"得到数据集压缩包。
 
@@ -48,14 +48,14 @@
   - 测试集：598短曝光+50长曝光
 - 数据集格式：本数据集使用RAW格式图片，jpg或者png等格式不支持本网络。
 
-## 4 环境依赖
+## 四、环境依赖
 - 硬件：本项目在Paddle AI Studio平台 4卡Tesla V100, 128G显存上运行，训练4000 epoch需要约16小时。根据原作者称，显存大小最小需要64G
 - 框架：
   - Paddlepaddle >= 2.0.0
   - rawpy
   - scipy == 1.1.0
 
-## 5 快速开始
+## 五、快速开始
 
 ### step1: clone
 
@@ -91,7 +91,7 @@ python test_Sony_paddle.py
 python eval.py
 ```
 
-## 6 代码结构与详细说明
+## 六、代码结构与详细说明
 
 ### 6.1 代码结构
 
@@ -125,7 +125,7 @@ python eval.py
 | checkpoint_load_dir | './checkpoint/' | 读取模型的路径 |
 | last_epoch | 4000 | 测试时读取哪一轮的模型 |
 
-## 7 模型信息
+## 七、模型信息
 
 |  信息   |  说明 |
 |  ----  |  ----  |
@@ -138,7 +138,7 @@ python eval.py
 | 下载链接 | [训练日志](https://pan.baidu.com/s/1q7HvQVRwZxoGQHon_tO2YA) 提取码：brfz |
 | 在线运行 | [SID-Paddle](https://aistudio.baidu.com/aistudio/projectdetail/2275443) |
 
-## 8 复现心得
+## 八、复现心得
 
 近期在老师的指导下，我和同组的学长开始学习使用百度飞桨框架，并成功使用该框架复现了若干篇经典论文。 以下部分是我的复现心得： 
 1.paddlepaddle大部分的api和pytorch基本一致，基本的对齐方式就是将pytorch的api转换为同名的paddlepaddle的api。 
